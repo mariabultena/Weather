@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
-<widget xmlns		= "http://www.w3.org/ns/widgets"
-	xmlns:gap	= "http://phonegap.com/ns/1.0"
-	id		= "com.mariabultena.weather"
-	versionCode	= "1"
-	version  	= "1.0.0" >
+<widget xmlns				= "http://www.w3.org/ns/widgets"
+		xmlns:gap			= "http://phonegap.com/ns/1.0"
+		id					= "com.mariabultena.weather"
+		versionCode			= "1"
+		version  			= "1.0.0" >
 
 	<name>Current Weather</name>
 
@@ -12,8 +12,10 @@
 
 	<author href = "http:github.com/mariabultena/Weather" email = "mariabultena@gmail.com"> Maria Bultena </author>
 
+	<plugin name="cordova-plugin-geolocation" spec="2.1.0" />
+
 	<icon src="icon.png"/>
-	
+
 
 
 </widget>
