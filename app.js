@@ -24,24 +24,40 @@ function sendRequest(url) {
 			weather.loc = data.name;
 			weather.temp = K2F(data.main.temp);
 			update(weather);
-			console.log(weather.direction)
 		}
 	};
 	xmlhttp.open("GET",url,true);
 	xmlhttp.send();
 }
 function degreesToDirection(degrees){
-		var range = 360/16; //22.5
-		var low = 360-range/2; //348.75
-		var high = (low+range) % 360;
-		var angles = ["N","NNE","NE","ENE","E","ESE","SE","SSE","S","SSW","SW","WSW","W","WNW","NW","NNW"];
-		for (i in angles){
-			if (degrees >= low && degrees < high)
-				return angles[i];
-			low = (low+range) % 360;
-			high=(high+range) %360;
+		if (degrees >=337.5 ) {
+			return "N";
 		}
-
+		else if (degrees <22.5 ) {
+			return "N";
+		}
+		else if ((degrees >=22.5) &&(degrees <67.5) ) {
+			return "NE";
+		}
+		else if ((degrees >=67.5) &&(degrees <112.5) ) {
+			return "E";
+		}
+		else if ((degrees >=112.5) && (degrees <157.5 )) {
+			return "SE";
+		}
+		else if ((degrees >=157.5) && (degrees<202.5 )) {
+			return "S";
+		}
+		else if ((degrees >=202.5) && (degrees<247.5) ) {
+			return "SW";
+		}
+		else if ((degrees >=247.5) && (degrees<292.5) ) {
+			return "W";
+		}
+		else if ((degrees >=292.5) && (degrees<337.5) ) {
+			return "NW";
+		}
+		
 }
 
 function K2C(k){
