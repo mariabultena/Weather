@@ -5,10 +5,6 @@ var icon;
 var humidity;
 var wind;
 var direction;
-function updateByGeo (lat,lon) {
-	var url = "http://api.openweathermap.org/data/2.5/weather?" + "lat=" + lat + "&lon=" + lon + "&APPID=" + API;
-	sendRequest(url);
-}
 
 function updateByZip(zip) {
 	var url = "http://api.openweathermap.org/data/2.5/weather?" + "zip=" + zip + "&APPID=" + API;
@@ -64,9 +60,7 @@ function update (weather){
 	icon.src = "imgs/codes/" + weather.icon + ".png";
 
 }
-function showPosition(position){
-	updateByGeo(position.coords.latitude, position.coords.longitude);
-}
+
 window.onload = function () {
 	temp = document.getElementById("temperature");
 	loc = document.getElementById("location");
@@ -75,16 +69,10 @@ window.onload = function () {
 	wind = document.getElementById("wind");
 	direction = document.getElementById("direction");
 
-	if(navigator.geolocation){
-		navigator.geolocation.getCurrentPosition(showPosition);
-
-	} else {
-		var zip = window.prompt("Could not discover your location. What is your zip code?");
-		updateByZip(zip);
-	}
-
-
-
+	
+	var zip = 99301;
+	updateByZip(zip);
+	
 
 }
 
