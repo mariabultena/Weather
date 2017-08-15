@@ -3,6 +3,17 @@ h1{
   text-align: center;
 }
 
+#refresh{
+  width: 100px;
+  display: block;
+  margin: auto;
+  margin-bottom: 40px;
+  background-color: blue;
+  color: white;
+  font-size: 16px;
+  border-radius: 8px;
+}
+
 .weather-app {
     margin: auto;
     width: 300px;
