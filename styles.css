@@ -1,3 +1,8 @@
+h1{
+  text-shadow: 4px 4px 16px #FFFFFF, -4px -4px 16px #FFFFFF;
+  text-align: center;
+}
+
 .weather-app {
     margin: auto;
     width: 300px;
