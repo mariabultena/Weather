@@ -7,7 +7,15 @@
     <script type="text/javascript" src="app.js"></script>
   </head>
   <body>
-
+ <h1>Local Traffic Camera Display</h1>
+    <FORM>
+    <INPUT ID="refresh" TYPE="button" onClick="myFunction()" VALUE="Refresh">
+  </FORM>
+    <script>
+	function myFunction() {
+    	location.reload(true);
+	}
+	</script>
     <div class="weather-app">
       <div class="left">
 	<div class="temperature"><span id="temperature">0</span>&deg;</div> 
